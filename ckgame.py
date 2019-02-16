@@ -8,9 +8,9 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 
-WIDTH = 400
-GRID_WIDTH = WIDTH // 200
-HEIGHT = 400
+WIDTH = 600
+GRID_WIDTH = 100
+HEIGHT = 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Red n' Black")
 
@@ -22,12 +22,13 @@ clock = pygame.time.Clock()
 base_folder = os.path.dirname(__file__)
 img_folder = os.path.join(base_folder, 'images')
 background_img = pygame.image.load(os.path.join(img_folder, 'board.png')).convert()
-
+background_img_2 = pygame.image.load(os.path.join(img_folder, 'wood.jpg')).convert()
 
 # draw the board (8 * 8)
 def draw_background(surf):
     # load background image
-    surf.blit(background_img, (0, 0))
+    surf.blit(background_img_2, (0, 0))
+    surf.blit(background_img, (100, 100))
 
     # draw board rim
     # print ((GRID_WIDTH, GRID_WIDTH))
@@ -43,15 +44,21 @@ def draw_background(surf):
         pygame.draw.line(surf, BLACK, line[0], line[1], 2)
 
     # draw grid
-    for i in range(8):
-        count = 25 * i
+    for i in range(1, 8):
+        count = (50 * i) + 100
+        # print ((GRID_WIDTH * count, GRID_WIDTH))
+        
         pygame.draw.line(surf, BLACK,
-                         (GRID_WIDTH * count, GRID_WIDTH),
-                         (GRID_WIDTH * count, HEIGHT - GRID_WIDTH))
+                         (count, GRID_WIDTH),
+                         (count, HEIGHT - GRID_WIDTH))
         pygame.draw.line(surf, BLACK,
-                         (GRID_WIDTH, GRID_WIDTH * count),
-                         (HEIGHT - GRID_WIDTH, GRID_WIDTH * count))
-
+                         (GRID_WIDTH, count),
+                         (HEIGHT - GRID_WIDTH, count))
+        '''
+        pygame.draw.line(surf, BLACK,
+                         (150, 100),
+                         (150, 500))
+        '''
 
 running = True
 while running:
