@@ -11,6 +11,8 @@ class Checkers:
 class CheckersController:
     def __init__(self):
         """Initialize a new CheckersController object."""
+        position_from = input("Which piece to move?: ")
+        position_to = input("Where to move to?: ")
 
     def play():
         """Run the game until is_game_won."""
