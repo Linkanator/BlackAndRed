@@ -3,7 +3,10 @@ import pygame
 class Checkers:
     '''
     '''
-    def __init__(self):
+    def __init__(self) -> None:
+        """Initialize a new Checkers object."""
+        self.controller = CheckersController()
+        self.model = CheckersModel()
 
     def update():
         
