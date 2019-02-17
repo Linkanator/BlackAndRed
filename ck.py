@@ -1,6 +1,6 @@
 import pygame
 
-class checkers:
+class Checkers:
     '''
     '''
     def __init__(self):
@@ -8,14 +8,14 @@ class checkers:
     def update():
         
 
-class checkers_controller:
+class CheckersController:
     def __init__(self):
 
     def play():
 
     def is_move_valid():
 
-class checkers_model:
+class CheckersModel:
     def __init__():
 
     def move():
@@ -24,7 +24,7 @@ class checkers_model:
 
     def is_game_won():
 
-class piece:
+class Piece:
     def __init__(self, x, y):
         self.x = x
         self.y = y
