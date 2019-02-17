@@ -9,7 +9,8 @@ class Checkers:
         self.model = CheckersModel()
 
     def update():
-        
+        """Update the view based on changes in the game."""
+
 
 class CheckersController:
     def __init__(self):
