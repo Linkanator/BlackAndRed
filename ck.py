@@ -10,7 +10,6 @@ class Checkers:
 
 class CheckersController:
     def __init__(self):
-        """Initialize a new CheckersController object."""
 
     def play():
 
