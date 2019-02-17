@@ -10,10 +10,13 @@ class Checkers:
 
 class CheckersController:
     def __init__(self):
+        """Initialize a new CheckersController object."""
 
     def play():
+        """Run the game until is_game_won."""
 
     def is_move_valid():
+        """Check if move is valid."""
 
 class CheckersModel:
     def __init__():
