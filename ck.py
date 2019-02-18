@@ -1,15 +1,20 @@
 import pygame
 
 class Checkers:
-    '''
-    '''
+    """Class that begins the game and updates the view."""
+    self.controller: CheckersController
+    self.model: CheckersModel
+
     def __init__(self) -> None:
         """Initialize a new Checkers object."""
         self.controller = CheckersController()
         self.model = CheckersModel()
 
-    def update():
-        """Update the view based on changes in the game."""
+    def update(self) -> None:
+        """Runs game for one round and updates view based on changes in the game."""
+        while not self.model.is_game_won():
+            move = self.controller.play()
+            self.model.move()
 
 
 class CheckersController:
