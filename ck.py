@@ -6,14 +6,30 @@ class Checkers:
     def __init__(self):
 
     def update():
+
         
-
+'''This is the CheckersController class, part of the MVC model. The attribute the class holds is the current
+CheckersModel. It has a play() method which determines whether the game is to continue, True for continuation
+and False, otherwise. There is also a is_move_valid() method that returns True if the move given is valid, and
+false otherwise.'''
 class CheckersController:
-    def __init__(self):
+    def __init__(self, model):
+        self.model = model
 
-    def play():
+    def play(self):
+        while(model.is_game_won() != False):
+            return 0
+        return 1
 
-    def is_move_valid():
+    def is_move_valid(self, move):
+        valid_input = "ABCDE"
+        if (move.getX() in valid_input): #move.getX is a letter, and to be valid must be ABCDE
+            if (move.getY >= 1 and move.getY <= 8): #move.getY is a number, and should be from 1 to 8
+                return True
+        return False
+
+
+
 
 class CheckersModel:
     def __init__():
