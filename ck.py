@@ -1,11 +1,24 @@
 import pygame
 
 class Checkers:
-    '''
-    '''
-    def __init__(self):
+    """Class that begins the game and updates the view."""
+    self.controller: CheckersController
+    self.model: CheckersModel
+
+    def __init__(self) -> None:
+        """Initialize a new Checkers object."""
+        self.controller = CheckersController()
+        self.model = CheckersModel()
+
+    def update(self) -> None:
+        """Runs game for one round and updates view based on changes in the game."""
+        while not self.model.is_game_won():
+            move = self.controller.play()
+            self.model.move()
 
     def update():
+
+
 
         
 '''This is the CheckersController class, part of the MVC model. The attribute the class holds is the current
@@ -18,8 +31,8 @@ class CheckersController:
 
     def play(self):
         while(model.is_game_won() != False):
-            return 0
-        return 1
+            return True
+        return False
 
     def is_move_valid(self, move):
         valid_input = "ABCDE"
@@ -30,6 +43,16 @@ class CheckersController:
 
 
 
+=======
+    def __init__(self):
+        """Initialize a new CheckersController object."""
+
+    def play():
+        """Run the game until is_game_won."""
+
+    def is_move_valid():
+        """Check if move is valid."""
+>>>>>>> 907d5944b81a420b078419aecb1ab24fa12102d9
 
 class CheckersModel:
     def __init__():
