@@ -26,33 +26,23 @@ CheckersModel. It has a play() method which determines whether the game is to co
 and False, otherwise. There is also a is_move_valid() method that returns True if the move given is valid, and
 false otherwise.'''
 class CheckersController:
+    """Initialize a new CheckersController object."""
     def __init__(self, model):
         self.model = model
 
     def play(self):
-        while(model.is_game_won() != False):
+        """Return true until is_game_won."""
+        while(model.is_game_won() != True):
             return True
         return False
 
     def is_move_valid(self, move):
+        """Check if move is valid."""
         valid_input = "ABCDE"
         if (move.getX() in valid_input): #move.getX is a letter, and to be valid must be ABCDE
             if (move.getY >= 1 and move.getY <= 8): #move.getY is a number, and should be from 1 to 8
                 return True
         return False
-
-
-
-=======
-    def __init__(self):
-        """Initialize a new CheckersController object."""
-
-    def play():
-        """Run the game until is_game_won."""
-
-    def is_move_valid():
-        """Check if move is valid."""
->>>>>>> 907d5944b81a420b078419aecb1ab24fa12102d9
 
 class CheckersModel:
     def __init__():
