@@ -7,13 +7,7 @@ class Player:
     @param Piece pieces: a list of checker pieces that the player starts off with
     """
     def __init__(self, pieces):
-        self.pieces = pieces
-
-    """Adds a checker piece to the current list of owned pieces
-    @param Piece piece: checker piece to be added
-    """
-    def add_piece(self, piece):
-        self.pieces.append(piece)
+        self.pieces = []
 
     """Removes a checker piece from the list of owned pieces
     @param Piece piece: checker piece to be removed
