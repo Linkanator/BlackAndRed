@@ -6,7 +6,7 @@ class Player:
     """Initializes a Player
     @param Piece pieces: a list of checker pieces that the player starts off with
     """
-    def __init__(self):
+    def __init__(self, pieces):
         self.pieces = []
 
     """Removes a checker piece from the list of owned pieces
