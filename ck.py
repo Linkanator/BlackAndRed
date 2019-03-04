@@ -18,7 +18,7 @@ class Checkers:
         winner = self.controller.winning_player()
         print(f"Congratulations on your win, Player {winner}!")
 
-        
+
 class CheckersModel:
     def __init__():
 
@@ -54,7 +54,7 @@ class Stage:
         (Stage, int, int) -> bool
         Return True iff the position (x, y) falls within the dimensions of this Stage.'''
         
-        return self.is_in_bounds_x(x) and self.is_in_bounds_y(y)
+        return self.is_in_bounds_x(y) and self.is_in_bounds_y(x)
 
     def is_in_bounds_x(self, x):
         '''
@@ -62,7 +62,7 @@ class Stage:
         Return True iff the x-coordinate given falls within the width of this Stage.
         '''
         
-        return 0 <= x and x < self._width
+        return 0 <= z and z < self._width
 
     def is_in_bounds_y(self, y):
         '''
@@ -70,7 +70,7 @@ class Stage:
         Return True iff the y-coordinate given falls within the height of this Stage.
         '''
 
-        return 0 <= y and y < self._height
+        return 0 <= x and x < self._height
 
     def get_width(self):
         '''
