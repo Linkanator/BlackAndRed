@@ -20,14 +20,24 @@ class Checkers:
 
 
 class CheckersModel:
-    def __init__():
+    "Initializes the game. Keep tracks of players, board and if game is over
+    def __init__(player1,player2,curr_player,game_board,move,game_over):
+        self.player1 = player1
+        self.player2 = player2
+        self.curr_player = curr_player
+        self.board = game_board
+        self.move = move
+        self.game_over = game_over
+    def move(self,move_from,move_to):
 
-    def move():
 
-    def player_turn():
+    def player_turn(self):
 
-    def is_game_won():
 
+    def is_game_won(self):
+        "Checks if any player has won, returns True if true, and False otherwise'
+
+        return self.game_over
 class Piece:
     def __init__(self, x, y):
         self.x = x
