@@ -29,10 +29,16 @@ class CheckersModel:
         self.move = move
         self.game_over = game_over
     def move(self,move_from,move_to):
-
+        "Moves a piece from one tile to another, and saves the move in self.move"
+        self.move.move_from = move_from
+        self.move.move_to = move_to
 
     def player_turn(self):
-
+        "Changes the turn of the curr_player"
+        if curr_player == self.player1:
+            curr_player = self.player2
+        else:
+            curr_player  = self.player1
 
     def is_game_won(self):
         "Checks if any player has won, returns True if true, and False otherwise'
