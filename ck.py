@@ -20,15 +20,15 @@ class Checkers:
 
 
 class CheckersModel:
-    "Initializes the game. Keep tracks of players, board and if game is over
-    def __init__(player1,player2,curr_player,game_board,move,game_over):
+    "Initializes the game. Keep tracks of players, board and if game is over"
+    def __init__():
         self.player1 = player1
         self.player2 = player2
         self.curr_player = curr_player
         self.board = game_board
         self.move = move
         self.game_over = game_over
-    def move(self,move_from,move_to):
+    def move(piece, move_from,move_to):
         "Moves a piece from one tile to another, and saves the move in self.move"
         self.move.move_from = move_from
         self.move.move_to = move_to
@@ -41,8 +41,7 @@ class CheckersModel:
             curr_player  = self.player1
 
     def is_game_won(self):
-        "Checks if any player has won, returns True if true, and False otherwise'
-
+        "Checks if any player has won, returns True if true, and False otherwise"
         return self.game_over
 class Piece:
     def __init__(self, x, y):
@@ -52,7 +51,6 @@ class Piece:
 
     def move(self, f, t):
         t = save.f.pop()
-        for 
 
     def get_position(self):
         return (x, y)
