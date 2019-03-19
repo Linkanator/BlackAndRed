@@ -22,14 +22,15 @@ class Checkers:
 class CheckersModel:
     "Initializes the game. Keep tracks of players, board and if game is over"
     def __init__():
-        self.player1 = player1
-        self.player2 = player2
-        self.curr_player = curr_player
-        self.board = game_board
-        self.move = move
-        self.game_over = game_over
-    def move(piece, move_from,move_to):
+        #TODO: make list of pieces for player() argument
+        self.player1 = player()
+        self.player2 = player()
+        self.curr_player = player
+        self.game_over = False
+        
+    def move(piece, move_from, move_to):
         "Moves a piece from one tile to another, and saves the move in self.move"
+        #TODO: set position of piece and check if move is valid/kills a piece/ crowns a piece
         self.move.move_from = move_from
         self.move.move_to = move_to
 
@@ -47,13 +48,17 @@ class Piece:
     def __init__(self, x, y):
         self.x = x
         self.y = y
-        save = {}
-
-    def move(self, f, t):
-        t = save.f.pop()
-
+        self.crown = False
+    
+    def set_crown():
+        self.crown = True
+    
+    def get_crown():
+        return self.crown
+    
     def get_position(self):
         return (x, y)
+    
     def set_position(self, new_x, new_y):
         self.x = new_x
         self.y = new_y
