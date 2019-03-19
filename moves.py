@@ -39,6 +39,12 @@ class moves:
 		
 		return to_coord, from_coord
 
+	"""
+	This function will create a 2-D array which stores the numeric coordinates of each tile on
+	the board. The function will be used to look up the corresponding x-y value of an alphanumeric 
+	coordinate that the user inputs. It is called whenever we have to update the view and change to location of 
+	a piece on the board. 
+	"""
 	def create_conversion_array():
 		array1 = []
 		for column in range(0,8):
