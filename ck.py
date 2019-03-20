@@ -14,8 +14,7 @@ class Checkers:
         """Runs game for one round and updates view based on changes in the game."""
         while not self.model.is_game_won():
             move = self.controller.play()
-            self.model.move()
-        winner = self.controller.winning_player()
+            inner = self.controller.winning_player()
         print(f"Congratulations on your win, Player {winner}!")
 
 
