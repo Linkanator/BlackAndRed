@@ -1,5 +1,7 @@
 import sys, pygame, random
 import os
+import game_board
+import Piece
 #from ck import *
 pygame.init()
 
@@ -114,6 +116,7 @@ while running:
     draw_background(screen)
 
     #display_box(screen, "From: ")
+
     for event in pygame.event.get():
         print (event)
 
