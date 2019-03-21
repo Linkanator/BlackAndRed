@@ -40,3 +40,35 @@ class Piece:
                     super().move(other, dx, dy)
                     return True
         return False
+
+    def set_position(self, x, y):
+        '''
+        (Actor, int, int) -> None
+        Set the position of this Actor to the given x- and y-coordinates.
+        '''
+
+        (self._x, self._y) = (x, y)
+
+    def get_position(self):
+        '''
+        (Actor) -> tuple of two ints
+        Return this Actor's x and y coordinates as a tuple.
+        '''
+
+        return (self._x, self._y)
+
+    def get_icon(self):
+        '''
+        (Actor) -> pygame.Surface
+        Return the image associated with this Actor.
+        '''
+
+        return self._icon
+
+    def is_dead(self):
+        '''
+        (Actor) -> bool
+        Return True iff this Actor is not alive.
+        '''
+
+        return False
