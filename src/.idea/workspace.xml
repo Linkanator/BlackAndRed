@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ckgame.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ckgame.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ckgame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="73" column="19" lean-forward="true" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+            <state relative-caret-position="429">
+              <caret line="124" column="13" lean-forward="false" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -23,14 +23,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Piece.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Piece.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Piece.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="59" column="23" lean-forward="true" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+            <state relative-caret-position="45">
+              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="game_board.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game_board.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-227">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -40,8 +50,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ckgame.py" />
         <option value="$PROJECT_DIR$/Piece.py" />
+        <option value="$PROJECT_DIR$/ckgame.py" />
       </list>
     </option>
   </component>
@@ -96,7 +106,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Piece">
+  <component name="RunManager" selected="Python.ckgame">
     <configuration name="Piece" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -139,8 +149,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Python.Piece" />
-        <item index="1" class="java.lang.String" itemvalue="Python.ckgame" />
+        <item index="0" class="java.lang.String" itemvalue="Python.ckgame" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Piece" />
       </list>
     </recent_temporary>
   </component>
@@ -191,20 +201,28 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ckgame.py">
+    <entry file="file://$PROJECT_DIR$/game_board.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="73" column="19" lean-forward="true" selection-start-line="73" selection-start-column="19" selection-end-line="73" selection-end-column="19" />
+        <state relative-caret-position="-227">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Piece.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Piece.py">
+    <entry file="file://$PROJECT_DIR$/ckgame.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="59" column="23" lean-forward="true" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+        <state relative-caret-position="429">
+          <caret line="124" column="13" lean-forward="false" selection-start-line="124" selection-start-column="13" selection-end-line="124" selection-end-column="13" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
