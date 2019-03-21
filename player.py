@@ -3,20 +3,12 @@ class Player:
     manipulate the pieces.
     '''
 
-    """Initializes a Player
-    @param Piece pieces: a list of checker pieces that the player starts off with
-    """
-    def __init__(self, pieces):
-        self.pieces = []
+    def __init__(self):
+        """Initializes a Player with 12 game pieces
+        """        
+        self.num_pieces = 12
 
-    """Removes a checker piece from the list of owned pieces
-    @param Piece piece: checker piece to be removed
-    """
-    def kill_piece(self, piece):
-        self.pieces.remove(piece)
-
-    """Return list of checker pieces currently owned
-    @return Array pieces: list of pieces
-    """
-    def get_pieces(self):
-        return self.pieces
+    def kill_piece(self):
+        """Removes a checker piece from player
+        """        
+        self.num_pieces -= 1
