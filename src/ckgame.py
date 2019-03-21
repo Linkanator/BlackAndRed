@@ -109,20 +109,20 @@ def set_piece(surf):
     #surf.blit(piece_red, (103, 203))
     x_black = 103
     y_black = 103
-    x_red = 353
-    y_red = 103
+    x_red = 103
+    y_red = 353
     for loc in range (4):
         # build black piece
         surf.blit(piece_black, (x_black, y_black))
         surf.blit(piece_black, (x_black + 50, y_black + 50))
-        surf.blit(piece_black, (x_black + 100, y_black))
+        surf.blit(piece_black, (x_black, y_black + 100))
         # build red piece
-        surf.blit(piece_red, (x_red, y_red + 50))
         surf.blit(piece_red, (x_red + 50, y_red))
-        surf.blit(piece_red, (x_red + 100, y_red + 50))
+        surf.blit(piece_red, (x_red, y_red + 50))
+        surf.blit(piece_red, (x_red + 50, y_red + 100))
         # make y-axle shift 100px
-        y_black += 100
-        y_red += 100
+        x_black += 100
+        x_red += 100
         
     
 
