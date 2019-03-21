@@ -14,23 +14,22 @@ class Checkers:
         """Runs game for one round and updates view based on changes in the game."""
         while not self.model.is_game_won():
             move = self.controller.play()
-            inner = self.controller.winning_player()
             self.model.move()
-            winner = self.controller.winning_player()
+        winner = self.controller.winning_player()
         print(f"Congratulations on your win, Player {winner}!")
 
 
 class CheckersModel:
     "Initializes the game. Keep tracks of players, board and if game is over"
     def __init__():
-        self.player1 = Player(player1_pieces)
-        self.player2 = player(player2_pieces)
+        self.player1 = Player()
+        self.player2 = Player()
         self.board = Board()
         self.curr_player = player1
         self.game_over = False
         
     def move(piece, move_from, move_to):
-        if (self.curr_player == player1):
+        if (self.curr_player == self.player1):
             player = "p1"
             crown = "p1c"
             next_player = "p2"
@@ -109,14 +108,20 @@ class CheckersModel:
         
     def player_turn(self):
         "Changes the turn of the curr_player"
-        if curr_player == self.player1:
-            curr_player = self.player2
+        if self.curr_player == self.player1:
+            self.curr_player = self.player2
         else:
-            curr_player  = self.player1
+            self.curr_player  = self.player1
 
     def is_game_won(self):
         "Checks if any player has won, returns True if true, and False otherwise"
-        return self.game_over
+        "Checks if any player has won, returns True if true, and False otherwise"
+        if(player1.get_pieces() == 0):
+            return True, "player1"
+        elif(player2.get_pieces() == 0):
+            return True, "player2"
+        else:
+            return False, "none"
     
 class Piece:
     def __init__(self, x, y):
