@@ -20,8 +20,8 @@ class Checkers:
 
 
 class CheckersModel:
-    "Initializes the game. Keep tracks of players, board and if game is over"
     def __init__():
+        """Initializes the game. Keep tracks of players, board and if game is over"""
         self.player1 = Player()
         self.player2 = Player()
         self.board = Board()
@@ -29,6 +29,9 @@ class CheckersModel:
         self.game_over = False
         
     def move(piece, move_from, move_to):
+        """Checks if move is valid and changes board accordingly
+        @return 0 is move is successful, 1 if move is invalid
+        """
         if (self.curr_player == self.player1):
             player = "p1"
             crown = "p1c"
