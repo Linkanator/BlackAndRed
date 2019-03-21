@@ -3,11 +3,17 @@ class Board:
     which player each tile is being occupied by'''
 
     def __init__(self):
-        """Initializes an empty 8x8 Board
+        """Initializes an 8x8 Board
         """
         self.board = []
-        for x in range(8):
-            self.board.append(["o", "o", "o", "o", "o", "o", "o", "o"])
+        self.board.append(["p2", "o", "p2", "o", "p2", "o", "p2", "o"])
+        self.board.append(["o", "p2", "o", "p2", "o", "p2", "o", "p2"])
+        self.board.append(["p2", "o", "p2", "o", "p2", "o", "p2", "o"])
+        self.board.append(["o", "o", "o", "o", "o", "o", "o", "o"])
+        self.board.append(["o", "o", "o", "o", "o", "o", "o", "o"])
+        self.board.append(["o", "p1", "o", "p1", "o", "p1", "o", "p1"])
+        self.board.append(["p1", "o", "p1", "o", "p1", "o", "p1", "o"])
+        self.board.append(["o", "p1", "o", "p1", "o", "p1", "o", "p1"])
 
     def is_tile_empty(self, x, y):
         """Returns if the tile at the specified location is empty or occupied by 
