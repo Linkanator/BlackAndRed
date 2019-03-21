@@ -22,18 +22,90 @@ class Checkers:
 class CheckersModel:
     "Initializes the game. Keep tracks of players, board and if game is over"
     def __init__():
-        #TODO: make list of pieces for player() argument
-        self.player1 = player()
-        self.player2 = player()
-        self.curr_player = player
+        self.player1 = Player(player1_pieces)
+        self.player2 = player(player2_pieces)
+        self.board = Board()
+        self.curr_player = player1
         self.game_over = False
         
     def move(piece, move_from, move_to):
+        if (self.curr_player == player1):
+            player = "p1"
+            crown = "p1c"
+            next_player = "p2"
+            next_crown = "p2c"            
+        else:
+            player = "p2"
+            crown = "p2c"
+            next_player = "p1"
+            next_crown = "p1c"            
+            
         "Moves a piece from one tile to another, and saves the move in self.move"
-        #TODO: set position of piece and check if move is valid/kills a piece/ crowns a piece
-        self.move.move_from = move_from
-        self.move.move_to = move_to
+        #TODO: set position of piece and check if move is valid/kills a piece/crowns a piece
+        to_tile = self.board.is_tile_empty(move_to.x, move_to.y)
+        from_tile = self.board.it_tile_empty(move_from.x, move_from.y)
+        
+        #check if correct piece is being moved to an empty tile
+        if(to_tile != "o"):
+            return 1
+        elif(from_tile == "o"):
+            return 1
+        elif(from_tile != player or from_tile != crown):
+            return 1
+            
+        #check if piece is moving in correct direction    
+        if(self.curr_player == "p1"):
+            if(move_from.y - move_to.y < 0 and from_tile != "p1c"):
+                return 1
+        if(self.curr_player == "p2"):
+            if(move_from.y - move_to.y > 0 and from_tile != "p2c"):
+                return 1
 
+        #check if piece is making a valid non-jump move
+        if(move_from.x - move_to.x == 1 or move_from.x - move_to.x == -1):
+            if(move_from.y - move_to.x == 1 or move_from.y - move_to.x == -1):
+                self.board.empty_tile(move_from.x, move_from.y)
+                self.board.fill_tile(move_to.x, move_to.y, from_tile)
+                return 0
+        #check if piece is jumping up and right
+        elif(move_from.x - move_to.x == 2 and move_from.y - move_from.y == 2):
+            if(self.board.is_tile_empty(move_from.x + 1, move_from.y + 1) == next_player \
+                or self.board.is_tile_empty(move_from.x + 1, move_from.y + 1) == next_crown):
+                self.board.empty_tile(move_from.x, move_from.y)
+                self.board.fill_tile(move_to.x, move_to.y, from_tile)
+                return 0
+            else:
+                return 1
+        #check if piece is jumping up and left
+        elif(move_from.x - move_to.x == -2 and move_from.y - move_from.y == 2):
+            if(self.board.is_tile_empty(move_from.x - 1, move_from.y + 1) == next_player \
+                or self.board.is_tile_empty(move_from.x - 1, move_from.y + 1) == next_crown):
+                self.board.empty_tile(move_from.x, move_from.y)
+                self.board.fill_tile(move_to.x, move_to.y, from_tile)
+                return 0
+            else:
+                return 1   
+        #check if piece is jumping down and right
+        elif(move_from.x - move_to.x == 2 and move_from.y - move_from.y == -2):
+            if(self.board.is_tile_empty(move_from.x + 1, move_from.y - 1) == next_player \
+                or self.board.is_tile_empty(move_from.x + 1, move_from.y - 1) == next_crown):
+                self.board.empty_tile(move_from.x, move_from.y)
+                self.board.fill_tile(move_to.x, move_to.y, from_tile)
+                return 0
+            else:
+                return 1      
+        #check if piece is jumping down and left
+        elif(move_from.x - move_to.x == -2 and move_from.y - move_from.y == -2):
+            if(self.board.is_tile_empty(move_from.x - 1, move_from.y - 1) == next_player \
+                or self.board.is_tile_empty(move_from.x - 1, move_from.y - 1) == next_crown):
+                self.board.empty_tile(move_from.x, move_from.y)
+                self.board.fill_tile(move_to.x, move_to.y, from_tile)
+                return 0
+            else:
+                return 1 
+        return 1
+        
+        
     def player_turn(self):
         "Changes the turn of the curr_player"
         if curr_player == self.player1:
@@ -44,6 +116,7 @@ class CheckersModel:
     def is_game_won(self):
         "Checks if any player has won, returns True if true, and False otherwise"
         return self.game_over
+    
 class Piece:
     def __init__(self, x, y):
         self.x = x
