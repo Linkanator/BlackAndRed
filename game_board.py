@@ -1,14 +1,14 @@
 class Board:
     '''A Board object that keeps track of which tiles are being occupied and by 
     which player each tile is being occupied by'''
-    
+
     def __init__(self):
         """Initializes an empty 8x8 Board
         """
         self.board = []
         for x in range(8):
             self.board.append(["o", "o", "o", "o", "o", "o", "o", "o"])
-            
+
     def is_tile_empty(self, x, y):
         """Returns if the tile at the specified location is empty or occupied by 
         a player
@@ -18,22 +18,28 @@ class Board:
         player1 or player2
         """
         return self.board[x][y]
-        
+
     def empty_tile(self, x, y):
         """Empties the specified tile
         @param x horizontal index of the tile
         @param y vertical index of the tile
-        """        
+        """
         self.board[x][y] = "o"
-        
+
     def fill_tile(self, x, y, player):
         """Occupy the spicified tile with the provided player
         @param x horizontal index of the tile
         @param y vertical index of the tile
         @param player a string indicating if player1 or player2 are occupying
         the tile
-        """        
-        self.board[x][y] = player
+        """
+        if((y == 0 and player == "p1") or player == "p1c"):
+            self.board[x][y] = "p1c"
+        elif((y == 7 and player == "p2") or player == "p2c"):
+            self.board[x][y] = "p2c"
+        else:
+            self.board[x][y] = player
+
         
     def clear_board(self):
         """Clear the game board
