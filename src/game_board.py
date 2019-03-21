@@ -34,11 +34,11 @@ class Board:
         the tile
         """
         if((y == 0 and player == "p1") or player == "p1c"):
-            self.board[x][y] = "p1c"
+            self.board[y][y] = "p1c"
         elif((y == 7 and player == "p2") or player == "p2c"):
-            self.board[x][y] = "p2c"
+            self.board[y][x] = "p2c"
         else:
-            self.board[x][y] = player
+            self.board[y][x] = player
 
         
     def clear_board(self):
