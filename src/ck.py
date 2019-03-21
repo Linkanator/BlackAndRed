@@ -25,7 +25,7 @@ class CheckersModel:
         """Initializes the game. Keep tracks of players, board and if game is over"""
         self.player1 = Player()
         self.player2 = Player()
-        self.board = board()
+        self.board = Board()
         self.curr_player = player1
         self.game_over = False
         
@@ -169,7 +169,7 @@ class Stage:
         Return height of Stage.
         '''
         
-        return self._heighti
+        return self._height
 
     def set_player(self, player):
         '''
