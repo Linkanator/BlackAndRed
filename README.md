@@ -7,7 +7,7 @@ BlackN'Red is an enjoyable game of Checkers for people of all ages. Just like a 
 BlackN'Red is an enjoyable game of Checkers. Just like a regular game of Checkers, this is a two-player, turn-based game.
 
 ## Getting Started: How to install and run the game
->>>>>>> 55a1ac5fae6f8e01f435ffa2576dc712f3896797
+
 The steps below will help you install and play BlackN'Red on your own machine.
 
 ### Required Software 
