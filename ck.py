@@ -126,26 +126,7 @@ class CheckersModel:
         else:
             return False, "none"
     
-class Piece:
-    def __init__(self, x, y):
-        self.x = x
-        self.y = y
-        self.crown = False
     
-    def set_crown():
-        self.crown = True
-    
-    def get_crown():
-        return self.crown
-    
-    def get_position(self):
-        return (x, y)
-    
-    def set_position(self, new_x, new_y):
-        self.x = new_x
-        self.y = new_y
-    
-
 class Stage:
     def __init__(self, width, height, icon_dimension):
 
