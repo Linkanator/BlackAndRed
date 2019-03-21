@@ -23,7 +23,7 @@ download link goes here
 ● BlackN'Red is a two-player game, where, just like a regular 8x8 checkerboard
 game, two players each start with 12 pieces.
 
-![Screen Shot 2019-03-20 at 8 29 17 PM](https://user-images.githubusercontent.com/47669299/54727593-029f3a80-4b4f-11e9-98ad-f2bef02b90dc.png)
+![Screen Shot 2019-03-20 at 8 29 17 PM](https://user-imaes.githubusercontent.com/47669299/54727593-029f3a80-4b4f-11e9-98ad-f2bef02b90dc.png)
 
 
 ● They can then make their way forward to the

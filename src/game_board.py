@@ -6,11 +6,11 @@ class Board:
         """Initializes an empty 8x8 Board
         """
         self.board = []
-        for x in range(8):
+        for x in range(9):
             self.board.append(["o", "o", "o", "o", "o", "o", "o", "o"])
 
     def is_tile_empty(self, x, y):
-        """Returns if the tile at the specified location is empty or occupied by 
+        """Returns the tile at the specified location is empty or occupied by 
         a player
         @param x horizontal index of the tile
         @param y vertical index of the tile
@@ -35,7 +35,7 @@ class Board:
         """
         if((y == 0 and player == "p1") or player == "p1c"):
             self.board[y][y] = "p1c"
-        elif((y == 7 and player == "p2") or player == "p2c"):
+        elif((y == 8 and player == "p2") or player == "p2c"):
             self.board[y][x] = "p2c"
         else:
             self.board[y][x] = player
