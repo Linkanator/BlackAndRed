@@ -20,6 +20,18 @@ class Checkers:
         print(f"Congratulations on your win, Player {winner}!")
 
 
+class CheckersController:
+    def __init__(self) -> None:
+        self.move_from = input("Choose the location of the piece to move")
+        self.move_to = input("Choose the location to move the piece to")
+
+    def play(self):
+
+
+    def winning_player(self):
+        
+
+
 class CheckersModel:
     def __init__():
         """Initializes the game. Keep tracks of players, board and if game is over"""
