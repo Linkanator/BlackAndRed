@@ -1,1 +1,1 @@
-Our project directory consists of a src folder which contains all of the classes we have created and used to implement the game. It also contains additional folder such as the images __pycache__ folders, which in turn contain additional information we used in our code.  
+Our project directory consists of a **src** folder which contains all of the classes we have created and used to implement the game. It also contains other folders such as the **images** and `__pycache__` folders, which in turn contain additional information we used in our code.  
