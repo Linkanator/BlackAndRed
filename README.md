@@ -6,10 +6,13 @@ The steps below will help you install and play BlackN'Red on your own machine.
 
 ### Required Software 
 
-Please make sure you have the following before installing BlackN'Red
+You will need Python3 and Pygame for the installation.
+
+You can also run the following commands on the Windows 10 bash shell or if you are using a linux machine
 
 ```
-Requirements here
+sudo apt-get install python3 
+sudo apt-get install python-pygame
 ```
 
 ### Download game
@@ -32,9 +35,9 @@ With a crowned piece, a player will be able to move forward and backward.
 ● The rules followed will be the same as a regular game of Checkers. Instructions on
 how to play the game will also be provided to players.
 
-## Repository contents
+## Repository structure
 
-## Coding structure
+## Coding 
 
 ## Authors
 * Jasmine Tang
