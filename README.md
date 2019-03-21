@@ -27,6 +27,16 @@ sudo apt-get install python-pygame
 [Pygame](https://www.pygame.org/download.shtml#Macintosh)
 (scroll down to see Mac download)
 
+### Install game
+	
+To install the game, place the following commands in a terminal window: 
+
+```
+git clone https://github.com/Linkanator/BlackAndRed
+cd BlackAndRed/src
+python3 Main.py
+```
+
 ## Game and How to Play
 ● BlackN'Red is a two-player game, where, just like a regular 8x8 checkerboard
 game, two players each start with 12 pieces.
