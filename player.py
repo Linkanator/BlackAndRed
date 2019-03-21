@@ -12,3 +12,9 @@ class Player:
         """Removes a checker piece from player
         """        
         self.num_pieces -= 1
+        
+    def get_pieces(self):
+        """Returns the number of pieces player still has
+        """
+        return self.num_pieces
+    
