@@ -37,7 +37,7 @@ class CheckersModel:
             player = "p1"
             crown = "p1c"
             next_player = "p2"
-            next_crown = "p2c"            
+            next_crown = "p2c "            
         else:
             player = "p2"
             crown = "p2c"
