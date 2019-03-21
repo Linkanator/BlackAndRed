@@ -32,8 +32,14 @@ class Board:
         @param y vertical index of the tile
         @param player a string indicating if player1 or player2 are occupying
         the tile
-        """        
-        self.board[x][y] = player
+        """     
+        if((y == 0 and player == "p1") or player == "p1c"):
+            self.board[x][y] = "p1c"
+        elif((y == 0 and player == "p2") or player == "p2c"):
+            self.board[x][y] = "p2c"
+        else:
+            self.board[x][y] = player
+
         
     def clear_board(self):
         """Clear the game board
