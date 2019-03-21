@@ -59,6 +59,46 @@ def draw_background(surf):
                          (150, 100),
                          (150, 500))
         '''
+    myfont=pygame.font.Font(None,40)
+    alp_lis = ["A", "B", "C", "D", "E", "F", "G", "H"]
+    num_lis = ["1", "2", "3", "4", "5", "6", "7", "8"]
+    ori_x = 75
+    ori_y = 115
+
+    # Mark the letter of the Y-axis of the board
+    for alp in range(len(alp_lis)):
+        textImage = myfont.render(alp_lis[alp],True,BLACK)
+        screen.blit(textImage,(ori_x,ori_y))
+        ori_y += 50
+
+    #textImage = myfont.render("B",True,BLACK)
+    #screen.blit(textImage,(75,165))
+        
+    ori_x = 115
+    ori_y = 65
+    for num in range(len(num_lis)):
+        textImage = myfont.render(num_lis[num],True,BLACK)
+        screen.blit(textImage,(ori_x,ori_y))
+        ori_x += 50
+
+
+def display_box(screen, message):
+    "Print a message in a box"
+    fontobject = pygame.font.Font(None,18)
+    pygame.draw.rect(screen, (0,0,0),
+                      ((screen.get_width() / 2) - 100,
+                      (screen.get_height() / 2) - 10,
+                      200,20), 0)
+    pygame.draw.rect(screen, (255,255,255),
+                      ((screen.get_width() / 2) - 102,
+                      (screen.get_height() / 2) - 12,
+                      204,24), 1)
+    if len(message) != 0:
+       screen.blit(fontobject.render(message, 1, (255,255,255)),
+                   ((screen.get_width() / 2) - 100, (screen.get_height() / 2) - 10))
+    pygame.display.flip()
+        
+    
 
 running = True
 while running:
@@ -72,6 +112,10 @@ while running:
 
     # draw the background board
     draw_background(screen)
+
+    #display_box(screen, "From: ")
+    for event in pygame.event.get():
+        print (event)
 
     # refresh
     pygame.display.flip()
