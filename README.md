@@ -1,10 +1,6 @@
-![Screen Shot 2019-03-21 at 2 44 05 PM](https://user-images.githubusercontent.com/47669299/54777046-cec42380-4be7-11e9-87bd-0c011c707947.png)
-  :black_circle: :red_circle:
-BlackN'Red is an enjoyable game of Checkers for people of all ages. Just like a regular game of checkers, this is a two-player, turn-based game
-
-# BlackN'Red: Game description
 ![Screen Shot 2019-03-21 at 3 09 27 PM](https://user-images.githubusercontent.com/47669299/54778558-5e1f0600-4beb-11e9-8c26-0c5729cf0072.png)  ![Screen Shot 2019-03-21 at 3 08 06 PM](https://user-images.githubusercontent.com/47669299/54778479-2b750d80-4beb-11e9-892f-8da6bfec7a67.png)       ![Screen Shot 2019-03-21 at 3 09 27 PM](https://user-images.githubusercontent.com/47669299/54778558-5e1f0600-4beb-11e9-8c26-0c5729cf0072.png)
 
+BlackN'Red is an enjoyable game of Checkers for people of all ages. Just like a regular game of checkers, this is a two-player, turn-based game
 
 ## Getting Started: How to run and install the software
 The steps below will help you install and play BlackN'Red on your own machine.
@@ -48,7 +44,16 @@ game, two players each start with 12 pieces.
 other side of the board, until they reach the opponent's end of the board and get crowned. 
 With a crowned piece, a player will be able to move both forward and backward.
 
-● The rules followed will be the same as a regular game of Checkers. 
+● The rules to playing BlackN'Red are as follows:
+
+- Moves are allowed only on the dark squares, so pieces always move diagonally. Single pieces are always limited to forward moves (toward    the opponent).
+- A piece making a move not involving a jump may move only one square.
+- A piece making only one jump leaps over one of the opponent's pieces, landing in a straight diagonal line on the other side. 
+- Multiple jumps are allowed during a single turn. They do not have to be in a straight diagonal line.
+- When a piece is jumped over, it is removed from the board.
+- When a piece reaches the opponent's side of the bord, it is crowned. 
+- Crowned pieces are also limited to moving diagonally but may move both forward and backward. 
+- Crowned pieces may combine jumps in several directions, forward and backward, on the same turn. 
 
 ### Screenshots
 
