@@ -6,7 +6,11 @@ class moves:
 	    Then converts the user input to the corresponding
 	    x-y values 
 	'''
+	def __init__(self, to_tile, from_tile):
+		self.to_tile = to_tile
+		self.from_tile = from_tile
 
+		
 	"""Takes a move that the user inputs and determines the 'from' and 'to' tiles that the user entered. 
 	It then converts each of these tiles in the form (a,b), where a and b are between 1 and 8 inclusive.
 	E.g. if user wants to jump from A1 to B1, we would convert A1 to (1,1) and B1 to (2,1). We do this in order
