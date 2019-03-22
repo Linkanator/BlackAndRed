@@ -9,6 +9,7 @@ pygame.init()
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
+RED = (255, 0, 0)
 
 WIDTH = 600
 GRID_WIDTH = 100
@@ -85,6 +86,16 @@ def draw_background(surf):
         screen.blit(textImage,(ori_x,ori_y))
         ori_x += 50
 
+def play_round(play):
+    myfont = pygame.font.Font(None, 40)
+    if play == "play 1":
+        textImage = myfont.render("Play 1", True, RED)
+        screen.blit(textImage, (80, 35))
+    else:
+        textImage = myfont.render("Play 2", True, RED)
+        screen.blit(textImage, (80, 35))
+
+
 
 def display_box(screen, message):
     "Print a message in a box"
@@ -143,6 +154,7 @@ while running:
     set_piece(screen)
 
     #display_box(screen, "From: ")
+    play_round("play 1")
 
     for event in pygame.event.get():
         print (event)
