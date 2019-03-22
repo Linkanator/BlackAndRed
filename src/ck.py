@@ -126,8 +126,9 @@ class CheckersModel:
             return True, "player2"
         else:
             return False, "none"
-    
-    
+
+
+"""
 class Stage:
     def __init__(self, width, height, icon_dimension):
 
@@ -259,4 +260,4 @@ class Stage:
             self._screen.blit(icon, rect)
         pygame.display.flip()
 
-    
+"""
