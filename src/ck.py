@@ -141,7 +141,7 @@ class Stage:
 
     def is_in_bounds_x(self, x):
         '''
-        (Stage, int) -> bool
+        (Stage, int) -> boolean
         Return True iff the x-coordinate given falls within the width of this Stage.
         '''
         
