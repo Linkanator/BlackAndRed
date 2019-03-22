@@ -142,7 +142,7 @@ class Stage:
 
     def is_in_bounds_x(self, x):
         '''
-        (Stage, int) -> bool
+        (Stage, int) -> boolean
         Return True iff the x-coordinate given falls within the width of this Stage.
         '''
         
@@ -258,6 +258,6 @@ class Stage:
             d = self._icon_dimension
             rect = pygame.Rect(x*d, y*d, d, d)
             self._screen.blit(icon, rect)
-        pygame.display.flip()
+        pygame.display.flipi()
 
 """
