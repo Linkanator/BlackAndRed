@@ -1,5 +1,6 @@
-Our current code allows the user to make only one jump at a time, and not consecutive jumps in one go. To allow this, we can expand the 
-code as follows:
+# **Code Expansion**
+
+An example of how we could extend our code is by adding an additional jump. Our current code allows the user to make only one jump at a time, and not consecutive jumps in one go. To allow this, we can expand the code as follows:
 - The code will extend the move class:
    1. a while loop that checks if player can move
    2. the player moves
