@@ -1,5 +1,5 @@
 import pygame
-
+'''
 class Checkers:
     """Class that begins the game and updates the view."""
     self.controller: CheckersController
@@ -19,7 +19,7 @@ class Checkers:
         winner = self.controller.winning_player()
         print(f"Congratulations on your win, Player {winner}!")
 
-
+'''
 class CheckersModel:
     def __init__():
         """Initializes the game. Keep tracks of players, board and if game is over"""
