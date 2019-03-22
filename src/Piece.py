@@ -1,5 +1,6 @@
 import sys, pygame, random
 import os
+import ck
 
 class Piece:
     '''

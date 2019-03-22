@@ -16,7 +16,7 @@ class Board:
         self.board.append(["o", "p1", "o", "p1", "o", "p1", "o", "p1"])
 
     def is_tile_empty(self, x, y):
-        """Returns if the tile at the specified location is empty or occupied by 
+        """Returns the tile at the specified location is empty or occupied by 
         a player
         @param x horizontal index of the tile
         @param y vertical index of the tile
