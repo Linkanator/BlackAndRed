@@ -3,7 +3,7 @@ class Board:
     which player each tile is being occupied by'''
 
     def __init__(self):
-        """Initializes an 8x8 Board
+        """Initializes an 8x8 Board with 12 pieces for player1 and 12 for player2
         """
         self.board = []
         self.board.append(["p2", "o", "p2", "o", "p2", "o", "p2", "o"])
