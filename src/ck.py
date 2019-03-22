@@ -55,7 +55,7 @@ class CheckersModel:
         elif(from_tile == "o"):
             return 1
         elif(from_tile != player or from_tile != crown):
-            return 1
+            return 1 
             
         #check if piece is moving in correct direction    
         if(self.curr_player == "p1"):
@@ -128,7 +128,7 @@ class CheckersModel:
             return False, "none"
 
 
-"""
+
 class Stage:
     def __init__(self, width, height, icon_dimension):
 
@@ -260,4 +260,4 @@ class Stage:
             self._screen.blit(icon, rect)
         pygame.display.flipi()
 
-"""
+
