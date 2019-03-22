@@ -28,7 +28,7 @@ class CheckersModel:
         self.board = Board()
         self.curr_player = player1
         self.game_over = False
-        
+'''        
     def move(piece, move_from, move_to):
         """Checks if move is valid and changes board accordingly
         @return 0 is move is successful, 1 if move is invalid
@@ -260,4 +260,4 @@ class Stage:
             self._screen.blit(icon, rect)
         pygame.display.flipi()
 
-
+'''
