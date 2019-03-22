@@ -7,13 +7,13 @@ class Checkers:
 
     def __init__(self) -> None:
         """Initialize a new Checkers object."""
-        self.controller = CheckersController()
         self.model = CheckersModel()
+        self.controller = CheckersController(self.model)
 
     def update(self) -> None:
         """Runs game for one round and updates view based on changes in the game."""
         while not self.model.is_game_won():
-            move = self.controller.play()
+            self.controller.play()
             self.model.move()
             inner = self.controller.winning_player()
         winner = self.controller.winning_player()
@@ -21,15 +21,15 @@ class Checkers:
 
 
 class CheckersController:
-    def __init__(self) -> None:
+    def __init__(self, model: CheckersModel) -> None:
+        self.model = model
+
+    def play(self):
         self.move_from = input("Choose the location of the piece to move")
         self.move_to = input("Choose the location to move the piece to")
 
-    def play(self):
-
-
     def winning_player(self):
-        
+
 
 
 class CheckersModel:
