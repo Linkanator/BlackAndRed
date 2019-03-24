@@ -11,7 +11,10 @@ class CheckersModel:
 
     def move(piece, move_from, move_to):
         """Checks if move is valid and changes board accordingly
-        @return 0 is move is successful, 1 if move is invalid
+        @param move_from   a PlayerMove object that indicates which tile the player is moving from
+        @param move_to     a PlayerMove object that indicates which tile the player is moving to
+        @return 0          move is successful
+        @return 1          move is invalid
         """
         if (self.curr_player == self.player1):
             player = "p1"
@@ -23,8 +26,8 @@ class CheckersModel:
             crown = "p2c"
             next_player = "p1"
             next_crown = "p1c"            
-            
-        "Moves a piece from one tile to another, and saves the move in self.move"
+        
+        #saves the piece at the from and to tile, if there is one    
         to_tile = self.board.is_tile_empty(move_to.x, move_to.y)
         from_tile = self.board.it_tile_empty(move_from.x, move_from.y)
         
@@ -90,15 +93,17 @@ class CheckersModel:
         
         
     def player_turn(self):
-        "Changes the turn of the curr_player"
+        '''Changes curr_player to the next turn's player'''
         if self.curr_player == self.player1:
             self.curr_player = self.player2
         else:
             self.curr_player  = self.player1
 
     def is_game_won(self):
-        "Checks if any player has won, returns True if true, and False otherwise"
-        "Checks if any player has won, returns True if true, and False otherwise"
+        '''Checks if any player has won.
+        @return True, player    game has been won, player that lost
+        @return False, player   game has not been won, no player
+        '''
         if(player1.get_pieces() == 0):
             return True, "player1"
         elif(player2.get_pieces() == 0):
