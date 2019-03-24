@@ -5,6 +5,9 @@ class Board:
     def __init__(self):
         """Initializes an 8x8 Board with 12 pieces for player1 and 12 for player2
         """
+        #"o" is empty tile
+        #"p1" is tile filled by a piece belonging to player1
+        #"p2" is tile filled by a piece belonging to player2
         self.board = []
         self.board.append(["p2", "o", "p2", "o", "p2", "o", "p2", "o"])
         self.board.append(["o", "p2", "o", "p2", "o", "p2", "o", "p2"])
@@ -18,26 +21,26 @@ class Board:
     def is_tile_empty(self, x, y):
         """Returns the tile at the specified location is empty or occupied by 
         a player
-        @param x horizontal index of the tile
-        @param y vertical index of the tile
-        @return a string indicating either an empty space or a space occupied by
-        player1 or player2
+        @param x  horizontal index of the tile
+        @param y  vertical index of the tile
+        @return   a string indicating either an empty space or a space occupied by
+                  player1 or player2
         """
         return self.board[x][y]
 
     def empty_tile(self, x, y):
         """Empties the specified tile
-        @param x horizontal index of the tile
-        @param y vertical index of the tile
+        @param x   horizontal index of the tile
+        @param y   vertical index of the tile
         """
         self.board[x][y] = "o"
 
     def fill_tile(self, x, y, player):
         """Occupy the spicified tile with the provided player
-        @param x horizontal index of the tile
-        @param y vertical index of the tile
-        @param player a string indicating if player1 or player2 are occupying
-        the tile
+        @param x        horizontal index of the tile
+        @param y        vertical index of the tile
+        @param player   a string indicating if player1 or player2 are occupying
+                        the tile
         """
         if((y == 0 and player == "p1") or player == "p1c"):
             self.board[y][y] = "p1c"
