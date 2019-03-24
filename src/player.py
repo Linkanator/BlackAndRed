@@ -1,6 +1,5 @@
 class Player:
-    '''A Player object that stores the pieces each player owns and provides methods to 
-    manipulate the pieces.
+    '''A Player object that keeps track of the number of pieces each player owns
     '''
 
     def __init__(self):
