@@ -4,6 +4,8 @@ class PlayerMove:
     
     def __init__(self, x, y):
         """Sets the x and y coordinates on the board
+        @param x    the horizontal index (or row) on the board
+        @param y    the vertical index (or column) on the board
         """
         self.x = x
         self.y = y
