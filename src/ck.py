@@ -8,7 +8,7 @@ class CheckersModel:
         self.board = Board()
         self.curr_player = player1
         self.game_over = False
-        
+
     def move(piece, move_from, move_to):
         """Checks if move is valid and changes board accordingly
         @return 0 is move is successful, 1 if move is invalid
@@ -25,7 +25,6 @@ class CheckersModel:
             next_crown = "p1c"            
             
         "Moves a piece from one tile to another, and saves the move in self.move"
-        #TODO: set position of piece and check if move is valid/kills a piece/crowns a piece
         to_tile = self.board.is_tile_empty(move_to.x, move_to.y)
         from_tile = self.board.it_tile_empty(move_from.x, move_from.y)
         
@@ -35,7 +34,7 @@ class CheckersModel:
         elif(from_tile == "o"):
             return 1
         elif(from_tile != player or from_tile != crown):
-            return 1
+            return 1 
             
         #check if piece is moving in correct direction    
         if(self.curr_player == "p1"):
@@ -108,7 +107,7 @@ class CheckersModel:
             return False, "none"
 
 
-"""
+
 class Stage:
     def __init__(self, width, height, icon_dimension):
 
@@ -240,4 +239,3 @@ class Stage:
             self._screen.blit(icon, rect)
         pygame.display.flipi()
 
-"""

@@ -32,7 +32,7 @@ To install the game, place the following commands in a terminal window:
 ```
 git clone https://github.com/Linkanator/BlackAndRed
 cd BlackAndRed/src
-python3 Main.py
+python3 ckgame.py
 ```
 
 ## Game and How to Play
