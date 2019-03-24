@@ -8,6 +8,8 @@
 
 ```src/moves.py```  contains the Move class that converts user input into an array with x and y values from 1-8.
 
-```scr/ckgame.py``` contains code for drawing the Checker board on the GUI.
+```src/ckgame.py``` contains code for drawing the Checker board on the GUI.
 
-```scr/player.py``` contains the Player class that keeps track of the number of pieces each player still has on the board.
+```src/player.py``` contains the Player class that keeps track of the number of pieces each player still has on the board.
+
+```src/player_move.py``` contains the PlayerMove class that stores the x and y coordinates of a tile on the board.
