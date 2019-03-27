@@ -1,34 +1,25 @@
 import pygame
 
-class Checkers:
-    """Class that begins the game and updates the view."""
-    self.controller: CheckersController
-    self.model: CheckersModel
-
-    def __init__(self) -> None:
-        """Initialize a new Checkers object."""
-        self.model = CheckersModel()
-        self.controller = CheckersController(self.model)
-
-    def update(self) -> None:
-        """Runs game for one round and updates view based on changes in the game."""
-        while not self.model.is_game_won():
-            self.controller.play()
-            self.model.move()
-            inner = self.controller.winning_player()
-        winner = self.controller.winning_player()
-        print(f"Congratulations on your win, Player {winner}!")
-
 
 class CheckersController:
-    def __init__(self, model: CheckersModel) -> None:
-        self.model = model
+    def __init__(self) -> None:
+        """Initialize new CheckersController object."""
+        self.model = CheckersModel()
 
     def play(self):
-        self.move_from = input("Choose the location of the piece to move")
-        self.move_to = input("Choose the location to move the piece to")
-
-    def winning_player(self):
+        """Run each round of the game until a player wins."""
+        is_won, winner = self.model.is_game_won()
+        while not is_won:
+            move_is_valid = False
+            while not move_is_valid:
+                move_from = input("Choose the location of the piece to move")
+                move_to = input("Choose the location to move the piece to")
+                returned_value = self.model.move(move_from, move_to)
+                if not returned_value:
+                    move_is_valid = True
+            self.model.player_turn()
+            is_won, winner = self.model.is_game_won()
+        print(f"Congratulations on your win, {winner}!")
 
 
 class CheckersModel:
