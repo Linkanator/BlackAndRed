@@ -35,6 +35,10 @@ class CheckersController:
                 if not returned_value:
                     move_is_valid = True
             is_won, loser = self.model.is_game_won()
+            if loser == "player1":
+                print("Congratulations on your win, Player 2!")
+            else:
+                print("Congratulations on your win, Player 1!")
 
     def winning_player(self):
 
