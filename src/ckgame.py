@@ -1,12 +1,15 @@
 import sys, pygame, random
 import os
-#from ck import *
+import game_board
+#import Piece
+#from Piece import *
 pygame.init()
 
 # set colour and size of screen
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
+RED = (255, 0, 0)
 
 WIDTH = 600
 GRID_WIDTH = 100
@@ -23,6 +26,8 @@ base_folder = os.path.dirname(__file__)
 img_folder = os.path.join(base_folder, 'images')
 background_img = pygame.image.load(os.path.join(img_folder, 'board.png')).convert()
 background_img_2 = pygame.image.load(os.path.join(img_folder, 'wood.jpg')).convert()
+piece_black = pygame.image.load(os.path.join(img_folder, 'black.png'))
+piece_red = pygame.image.load(os.path.join(img_folder, 'red.png'))
 
 # draw the board (8 * 8)
 def draw_background(surf):
@@ -81,6 +86,16 @@ def draw_background(surf):
         screen.blit(textImage,(ori_x,ori_y))
         ori_x += 50
 
+def play_round(play):
+    myfont = pygame.font.Font(None, 40)
+    if play == "play 1":
+        textImage = myfont.render("Play 1", True, RED)
+        screen.blit(textImage, (80, 35))
+    else:
+        textImage = myfont.render("Play 2", True, RED)
+        screen.blit(textImage, (80, 35))
+
+
 
 def display_box(screen, message):
     "Print a message in a box"
@@ -97,6 +112,28 @@ def display_box(screen, message):
        screen.blit(fontobject.render(message, 1, (255,255,255)),
                    ((screen.get_width() / 2) - 100, (screen.get_height() / 2) - 10))
     pygame.display.flip()
+
+
+def set_piece(surf):
+    #surf.blit(piece_black, (153, 153))
+    #surf.blit(piece_red, (103, 103))
+    #surf.blit(piece_red, (103, 203))
+    x_black = 103
+    y_black = 103
+    x_red = 103
+    y_red = 353
+    for loc in range (4):
+        # build black piece
+        surf.blit(piece_black, (x_black, y_black))
+        surf.blit(piece_black, (x_black + 50, y_black + 50))
+        surf.blit(piece_black, (x_black, y_black + 100))
+        # build red piece
+        surf.blit(piece_red, (x_red + 50, y_red))
+        surf.blit(piece_red, (x_red, y_red + 50))
+        surf.blit(piece_red, (x_red + 50, y_red + 100))
+        # make y-axle shift 100px
+        x_black += 100
+        x_red += 100
         
     
 
@@ -113,7 +150,12 @@ while running:
     # draw the background board
     draw_background(screen)
 
+    # draw the piece for the board
+    set_piece(screen)
+
     #display_box(screen, "From: ")
+    play_round("play 1")
+
     for event in pygame.event.get():
         print (event)
 

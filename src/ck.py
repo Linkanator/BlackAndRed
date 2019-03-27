@@ -31,7 +31,6 @@ class CheckersController:
     def winning_player(self):
 
 
-
 class CheckersModel:
     def __init__():
         """Initializes the game. Keep tracks of players, board and if game is over"""
@@ -40,10 +39,13 @@ class CheckersModel:
         self.board = Board()
         self.curr_player = player1
         self.game_over = False
-        
+
     def move(piece, move_from, move_to):
         """Checks if move is valid and changes board accordingly
-        @return 0 is move is successful, 1 if move is invalid
+        @param move_from   a PlayerMove object that indicates which tile the player is moving from
+        @param move_to     a PlayerMove object that indicates which tile the player is moving to
+        @return 0          move is successful
+        @return 1          move is invalid
         """
         if (self.curr_player == self.player1):
             player = "p1"
@@ -55,9 +57,8 @@ class CheckersModel:
             crown = "p2c"
             next_player = "p1"
             next_crown = "p1c"            
-            
-        "Moves a piece from one tile to another, and saves the move in self.move"
-        #TODO: set position of piece and check if move is valid/kills a piece/crowns a piece
+        
+        #saves the piece at the from and to tile, if there is one    
         to_tile = self.board.is_tile_empty(move_to.x, move_to.y)
         from_tile = self.board.it_tile_empty(move_from.x, move_from.y)
         
@@ -67,7 +68,7 @@ class CheckersModel:
         elif(from_tile == "o"):
             return 1
         elif(from_tile != player or from_tile != crown):
-            return 1
+            return 1 
             
         #check if piece is moving in correct direction    
         if(self.curr_player == "p1"):
@@ -123,152 +124,21 @@ class CheckersModel:
         
         
     def player_turn(self):
-        "Changes the turn of the curr_player"
+        '''Changes curr_player to the next turn's player'''
         if self.curr_player == self.player1:
             self.curr_player = self.player2
         else:
             self.curr_player  = self.player1
 
     def is_game_won(self):
-        "Checks if any player has won, returns True if true, and False otherwise"
-        "Checks if any player has won, returns True if true, and False otherwise"
+        '''Checks if any player has won.
+        @return True, player    game has been won, player that lost
+        @return False, player   game has not been won, no player
+        '''
         if(player1.get_pieces() == 0):
             return True, "player1"
         elif(player2.get_pieces() == 0):
             return True, "player2"
         else:
             return False, "none"
-    
-    
-class Stage:
-    def __init__(self, width, height, icon_dimension):
 
-
-    def is_in_bounds(self, x, y):
-        '''
-        (Stage, int, int) -> bool
-        Return True iff the position (x, y) falls within the dimensions of this Stage.'''
-        
-        return self.is_in_bounds_x(y) and self.is_in_bounds_y(x)
-
-    def is_in_bounds_x(self, x):
-        '''
-        (Stage, int) -> bool
-        Return True iff the x-coordinate given falls within the width of this Stage.
-        '''
-        
-        return 0 <= z and z < self._width
-
-    def is_in_bounds_y(self, y):
-        '''
-        (Stage, int) -> bool
-        Return True iff the y-coordinate given falls within the height of this Stage.
-        '''
-
-        return 0 <= x and x < self._height
-
-    def get_width(self):
-        '''
-        (Stage) -> int
-        Return width of Stage.
-        '''
-
-        return self._width
-
-    def get_height(self):
-        '''
-        (Stage) -> int
-        Return height of Stage.
-        '''
-        
-        return self._height
-
-    def set_player(self, player):
-        '''
-        (Stage, Player) -> None
-        A Player is a special actor, store a reference to this Player in the attribute
-        self._player, and add the Player to the list of Actors.
-        '''
-        
-        self._player=player
-        self.add_actor(self._player)
-
-    def remove_player(self):
-        '''
-        (Stage) -> None
-        Remove the Player from the Stage.
-        '''
-        
-        self.remove_actor(self._player)
-        self._player=None
-
-    def player_event(self, event):
-        '''
-        (Stage, int) -> None
-        Send a user event to the player (this is a special Actor).
-        '''
-        
-        self._player.handle_event(event)
-
-    def add_actor(self, actor):
-        '''
-        (Stage, Actor) -> None
-        Add the given actor to the Stage.
-        '''
-
-        self._actors.append(actor)
-
-    def remove_actor(self, actor):
-        '''
-        (Stage, Actor) -> None
-        Remove the given actor from the Stage.
-        '''
-        
-        self._actors.remove(actor)
-
-    def step(self):
-        '''
-        (Stage) -> None
-        Take one step in the animation of the game. 
-        Do this by asking each of the actors on this Stage to take a single step.
-        '''
-
-        for a in self._actors:
-            a.step()
-
-    def get_actors(self):
-        '''
-        (Stage) -> None
-        Return the list of Actors on this Stage.
-        '''
-        
-        return self._actors
-
-    def get_actor(self, x, y):
-        '''
-        (Stage, int, int) -> Actor or None
-        Return the first actor at coordinates (x,y).
-        Or, return None if there is no Actor in that position.
-        '''
-        
-        for a in self._actors:
-            if a.get_position() == (x,y):
-                return a
-        return None
-
-    def draw(self):
-        '''
-        (Stage) -> None
-        Draw all Actors that are part of this Stage to the screen.
-        '''
-        
-        self._screen.fill((0,0,0)) # (0,0,0)=(r,g,b)=black
-        for a in self._actors:
-            icon = a.get_icon()
-            (x,y) = a.get_position()
-            d = self._icon_dimension
-            rect = pygame.Rect(x*d, y*d, d, d)
-            self._screen.blit(icon, rect)
-        pygame.display.flip()
-
-    
