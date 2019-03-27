@@ -25,8 +25,14 @@ class CheckersController:
         self.model = model
 
     def play(self):
-        self.move_from = input("Choose the location of the piece to move")
-        self.move_to = input("Choose the location to move the piece to")
+        while not self.model.is_game_won():
+            move_is_valid = False
+            while not move_is_valid:
+                move_from = input("Choose the location of the piece to move")
+                move_to = input("Choose the location to move the piece to")
+                returned_value = self.model.move(move_from, move_to)
+                if not returned_value:
+                    move_is_valid = True
 
     def winning_player(self):
 
