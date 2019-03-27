@@ -25,7 +25,8 @@ class CheckersController:
         self.model = model
 
     def play(self):
-        while not self.model.is_game_won():
+        is_won, loser = self.model.is_game_won()
+        while not is_won:
             move_is_valid = False
             while not move_is_valid:
                 move_from = input("Choose the location of the piece to move")
@@ -33,6 +34,7 @@ class CheckersController:
                 returned_value = self.model.move(move_from, move_to)
                 if not returned_value:
                     move_is_valid = True
+            is_won, loser = self.model.is_game_won()
 
     def winning_player(self):
 
