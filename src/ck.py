@@ -1,28 +1,9 @@
 import pygame
 
-class Checkers:
-    """Class that begins the game and updates the view."""
-    self.controller: CheckersController
-    self.model: CheckersModel
-
-    def __init__(self) -> None:
-        """Initialize a new Checkers object."""
-        self.model = CheckersModel()
-        self.controller = CheckersController(self.model)
-
-    def update(self) -> None:
-        """Runs game for one round and updates view based on changes in the game."""
-        while not self.model.is_game_won():
-            self.controller.play()
-            self.model.move()
-            inner = self.controller.winning_player()
-        winner = self.controller.winning_player()
-        print(f"Congratulations on your win, Player {winner}!")
-
 
 class CheckersController:
-    def __init__(self, model: CheckersModel) -> None:
-        self.model = model
+    def __init__(self) -> None:
+        self.model = CheckersModel()
 
     def play(self):
         is_won, loser = self.model.is_game_won()
@@ -39,8 +20,6 @@ class CheckersController:
                 print("Congratulations on your win, Player 2!")
             else:
                 print("Congratulations on your win, Player 1!")
-
-    def winning_player(self):
 
 
 class CheckersModel:
