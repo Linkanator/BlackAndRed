@@ -3,9 +3,11 @@ import pygame
 
 class CheckersController:
     def __init__(self) -> None:
+        """Initialize new CheckersController object."""
         self.model = CheckersModel()
 
     def play(self):
+        """Run each round of the game until a player wins."""
         is_won, loser = self.model.is_game_won()
         while not is_won:
             move_is_valid = False
