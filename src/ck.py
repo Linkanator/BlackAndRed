@@ -8,7 +8,7 @@ class CheckersController:
 
     def play(self):
         """Run each round of the game until a player wins."""
-        is_won, loser = self.model.is_game_won()
+        is_won, winner = self.model.is_game_won()
         while not is_won:
             move_is_valid = False
             while not move_is_valid:
@@ -17,11 +17,9 @@ class CheckersController:
                 returned_value = self.model.move(move_from, move_to)
                 if not returned_value:
                     move_is_valid = True
-            is_won, loser = self.model.is_game_won()
-            if loser == "player1":
-                print("Congratulations on your win, Player 2!")
-            else:
-                print("Congratulations on your win, Player 1!")
+            self.model.player_turn()
+            is_won, winner = self.model.is_game_won()
+        print(f"Congratulations on your win, {winner}!")
 
 
 class CheckersModel:
